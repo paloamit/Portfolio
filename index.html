@@ -613,6 +613,69 @@
       line-height: 1.7;
     }
 
+    /* ===== APPS ===== */
+    #apps { background: var(--bg); }
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .app-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.6rem;
+      text-decoration: none;
+      color: var(--dark);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-height: 210px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+      transition: var(--transition);
+      border-top: 4px solid var(--yellow);
+    }
+    .app-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--card-shadow);
+    }
+    .app-icon {
+      width: 56px; height: 56px;
+      background: var(--yellow-light);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--yellow-dark);
+      font-size: 1.35rem;
+      transition: var(--transition);
+    }
+    .app-card:hover .app-icon {
+      background: var(--yellow);
+      color: var(--dark);
+    }
+    .app-content h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.45rem;
+    }
+    .app-content p {
+      font-size: 0.84rem;
+      line-height: 1.6;
+      color: var(--gray);
+    }
+    .app-link {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--yellow-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
     /* ===== ACHIEVEMENTS ===== */
     #achievements { background: var(--bg); }
     .achievements-grid {
@@ -1115,6 +1178,89 @@
     </div>
   </section>
 
+  <!-- APPS -->
+  <section id="apps">
+    <div class="section-header">
+      <div class="section-tag">App Store Work</div>
+      <h2 class="section-title">Apps I've Worked On</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="apps-grid">
+      <a class="app-card" href="https://apps.apple.com/in/app/tira-online-beauty-shopping/id1619767136?uo=4" target="_blank" rel="noopener" aria-label="Open Tira on the App Store">
+        <div class="app-icon"><i class="fas fa-bag-shopping"></i></div>
+        <div class="app-content">
+          <h3>Tira: Online Beauty Shopping</h3>
+          <p>Beauty e-commerce app with checkout, referrals, virtual try-on, payments, and skin analyzer journeys.</p>
+        </div>
+        <span class="app-link">View on App Store <i class="fas fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/es/app/openbank-banca-online/id1217874244?uo=4" target="_blank" rel="noopener" aria-label="Open Openbank Spain on the App Store">
+        <div class="app-icon"><i class="fas fa-building-columns"></i></div>
+        <div class="app-content">
+          <h3>Openbank | Banca Online</h3>
+          <p>Digital banking experience for Spain with mobile account and transaction workflows.</p>
+        </div>
+        <span class="app-link">View on App Store <i class="fas fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/us/app/openbank-u-s/id6504042600?uo=4" target="_blank" rel="noopener" aria-label="Open Openbank U.S. on the App Store">
+        <div class="app-icon"><i class="fas fa-credit-card"></i></div>
+        <div class="app-content">
+          <h3>Openbank U.S.</h3>
+          <p>U.S. banking app built around secure onboarding, account access, and daily banking flows.</p>
+        </div>
+        <span class="app-link">View on App Store <i class="fas fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/us/app/lightify/id911362586?uo=4" target="_blank" rel="noopener" aria-label="Open LIGHTIFY on the App Store">
+        <div class="app-icon"><i class="fas fa-lightbulb"></i></div>
+        <div class="app-content">
+          <h3>LIGHTIFY</h3>
+          <p>IoT home automation app for controlling connected lights, switches, and sensors.</p>
+        </div>
+        <span class="app-link">View on App Store <i class="fas fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/us/app/hong-kong-disneyland/id1077550649?uo=4" target="_blank" rel="noopener" aria-label="Open Hong Kong Disneyland on the App Store">
+        <div class="app-icon"><i class="fas fa-ticket"></i></div>
+        <div class="app-content">
+          <h3>Hong Kong Disneyland</h3>
+          <p>Park guest app supporting discovery, planning, and entertainment experiences.</p>
+        </div>
+        <span class="app-link">View on App Store <i class="fas fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/us/app/disneyland/id1022164656?uo=4" target="_blank" rel="noopener" aria-label="Open Disneyland on the App Store">
+        <div class="app-icon"><i class="fas fa-map-location-dot"></i></div>
+        <div class="app-content">
+          <h3>Disneyland</h3>
+          <p>Media and park experience app for U.S. Disneyland guests and entertainment journeys.</p>
+        </div>
+        <span class="app-link">View on App Store <i class="fas fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/us/app/livingwith-cancer-support/id1223073769?uo=4" target="_blank" rel="noopener" aria-label="Open LivingWith Cancer Support on the App Store">
+        <div class="app-icon"><i class="fas fa-hand-holding-medical"></i></div>
+        <div class="app-content">
+          <h3>LivingWith: Cancer Support</h3>
+          <p>Healthcare support app for people living with cancer and their care circles.</p>
+        </div>
+        <span class="app-link">View on App Store <i class="fas fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/us/app/ig-companion/id1576520169?uo=4" target="_blank" rel="noopener" aria-label="Open IG Companion on the App Store">
+        <div class="app-icon"><i class="fas fa-notes-medical"></i></div>
+        <div class="app-content">
+          <h3>IG Companion</h3>
+          <p>Pfizer healthcare companion app focused on patient support and treatment routines.</p>
+        </div>
+        <span class="app-link">View on App Store <i class="fas fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/us/app/hemmobile/id570014269?uo=4" target="_blank" rel="noopener" aria-label="Open HemMobile on the App Store">
+        <div class="app-icon"><i class="fas fa-heart-pulse"></i></div>
+        <div class="app-content">
+          <h3>HemMobile</h3>
+          <p>Pfizer healthcare app supporting hemophilia care, tracking, and patient engagement.</p>
+        </div>
+        <span class="app-link">View on App Store <i class="fas fa-arrow-up-right-from-square"></i></span>
+      </a>
+    </div>
+  </section>
+
   <!-- EDUCATION -->
   <section id="education">
     <div class="section-header">
@@ -1372,7 +1518,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.timeline-item, .skill-category, .service-card, .achievement-card').forEach(el => {
+    document.querySelectorAll('.timeline-item, .skill-category, .service-card, .app-card, .achievement-card').forEach(el => {
       el.style.opacity = '0';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(el);
