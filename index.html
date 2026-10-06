@@ -676,6 +676,45 @@
       letter-spacing: 0.5px;
     }
 
+    /* ===== BEAUTYAI ===== */
+    #beautyai { background: var(--white); }
+    .beautyai-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .beautyai-lead {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--gray);
+      margin-bottom: 1.2rem;
+    }
+    .beautyai-lead strong { color: var(--dark); }
+    .beautyai-embed {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .beautyai-embed iframe {
+      width: 504px;
+      max-width: 100%;
+      height: 550px;
+      border-radius: 12px;
+      background: var(--bg);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .beautyai-embed > a {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--yellow-dark);
+      text-decoration: none;
+    }
+    .beautyai-embed > a:hover { text-decoration: underline; }
+
     /* ===== ACHIEVEMENTS ===== */
     #achievements { background: var(--bg); }
     .achievements-grid {
@@ -880,7 +919,7 @@
       .hero-content { align-items: center; display: flex; flex-direction: column; }
       .hero-btns, .social-links { justify-content: center; }
       .hero-image { flex: none; }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .about-grid, .contact-grid, .beautyai-grid { grid-template-columns: 1fr; gap: 2rem; }
       .nav-links { display: none; }
       .hamburger { display: flex; }
     }
@@ -896,6 +935,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#beautyai">BeautyAI</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -913,11 +953,12 @@
       <h1 class="hero-name">Amit Kumar<br><span>Palo</span></h1>
       <p class="hero-title">Lead <strong>Mobile & Full-Stack Engineer</strong></p>
       <p class="hero-desc">
-        11+ years building scalable, high-performance applications across iOS, Backend & Cross-Platform architectures in IoT, Banking, Healthcare, Media & E-Commerce.
+        12+ years building scalable, high-performance applications across iOS, Backend, Cross-Platform & AI-powered architectures in E-Commerce, Banking, Healthcare, IoT, Media & Retail.
       </p>
       <div class="hero-btns">
         <a href="#contact" class="btn-primary">Hire Me</a>
         <a href="#experience" class="btn-outline">View Work</a>
+        <a href="#beautyai" class="btn-outline" style="border-color:var(--yellow-dark);color:var(--yellow-dark)">✨ BeautyAI MVP</a>
         <a href="resume.pdf" download="Amit_Kumar_Palo_Resume.pdf" class="btn-outline" style="display:inline-flex;align-items:center;gap:0.4rem"><i class="fas fa-download"></i>&nbsp;Resume</a>
       </div>
       <div class="social-links">
@@ -933,7 +974,7 @@
         <div class="hero-img-wrapper">
           <img src="photo.jpeg" alt="Amit Kumar Palo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'font-size:5rem\'>👨‍💻</div>'"/>
         </div>
-        <div class="hero-badge">🏆 11+ Years Experience</div>
+        <div class="hero-badge">🏆 12+ Years Experience</div>
       </div>
     </div>
   </section>
@@ -948,7 +989,7 @@
     <div class="about-grid">
       <div class="about-stats">
         <div class="stat-card">
-          <div class="stat-number">11+</div>
+          <div class="stat-number">12+</div>
           <div class="stat-label">Years Experience</div>
         </div>
         <div class="stat-card">
@@ -973,16 +1014,16 @@
           Currently leading a team of 6 at <strong>Jio Platforms Limited</strong>, driving technical excellence on the Tira Beauty app. I reduced cart load time from 9s to 3s, improved app startup by 18%, and helped grow the App Store rating from 3.7 to 4.0.
         </p>
         <p>
-          I also build AI-driven solutions powered by LLMs — including product recommendation agents using ChatGPT for intelligent personalization.
+          I also architect AI-driven solutions powered by LLMs — recently building <strong>BeautyAI</strong>, a RAG-based conversational beauty assistant (React + FastAPI + Groq) with live product catalog search, streaming responses, and feedback-driven quality loops.
         </p>
         <div class="about-chips">
           <span class="chip">Swift</span>
           <span class="chip">Objective-C</span>
           <span class="chip">Node.js</span>
           <span class="chip">React Native</span>
-          <span class="chip">ARKit</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Groq / LLMs</span>
           <span class="chip">BLE / IoT</span>
-          <span class="chip">LLMs / AI</span>
           <span class="chip">CI/CD</span>
         </div>
       </div>
@@ -1019,12 +1060,15 @@
         <div class="skill-tags">
           <span class="skill-tag primary">Node.js</span>
           <span class="skill-tag primary">RESTful APIs</span>
+          <span class="skill-tag primary">FastAPI</span>
           <span class="skill-tag">GraphQL</span>
           <span class="skill-tag">React</span>
+          <span class="skill-tag">TypeScript</span>
           <span class="skill-tag">React Native</span>
           <span class="skill-tag">Python</span>
           <span class="skill-tag">Django</span>
-          <span class="skill-tag">Shell Script</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">SQLite</span>
           <span class="skill-tag">Java</span>
           <span class="skill-tag">Kotlin</span>
           <span class="skill-tag">C#</span>
@@ -1048,16 +1092,21 @@
         </div>
       </div>
       <div class="skill-category">
-        <div class="skill-cat-title"><i class="fas fa-robot"></i> AI & IoT</div>
+        <div class="skill-cat-title"><i class="fas fa-robot"></i> AI, LLMs & IoT</div>
         <div class="skill-tags">
+          <span class="skill-tag primary">Groq (GPT-OSS)</span>
+          <span class="skill-tag primary">RAG</span>
           <span class="skill-tag primary">ChatGPT / LLMs</span>
-          <span class="skill-tag primary">Bluetooth BLE</span>
-          <span class="skill-tag">Azure IoT</span>
+          <span class="skill-tag">Tool Calling</span>
+          <span class="skill-tag">Prompt Engineering</span>
+          <span class="skill-tag">Langfuse</span>
+          <span class="skill-tag">Prometheus</span>
+          <span class="skill-tag">SSE Streaming</span>
+          <span class="skill-tag">Claude</span>
           <span class="skill-tag">Cursor AI</span>
           <span class="skill-tag">GitHub Copilot</span>
-          <span class="skill-tag">Claude</span>
-          <span class="skill-tag">PerfectCorp</span>
-          <span class="skill-tag">Xamarin</span>
+          <span class="skill-tag">Bluetooth BLE</span>
+          <span class="skill-tag">Azure IoT</span>
         </div>
       </div>
       <div class="skill-category">
@@ -1107,14 +1156,15 @@
           </div>
           <div class="timeline-role">Lead Software Engineer</div>
           <ul class="timeline-desc">
-            <li>Architected and led end-to-end development of Smart Mirror Enterprise app and Tira Beauty app (App Store) from scratch.</li>
-            <li>Designed scalable RESTful APIs with Node.js using SOLID principles and design patterns (MVVM, DI, Factory).</li>
-            <li>Led high-impact features: Referrals, Virtual Try-On, Checkout Revamp, Payments, Skin Analyzer.</li>
+            <li>Architected and led end-to-end development of the Smart Mirror Enterprise app from scratch and contributed to the Tira Beauty app (App Store).</li>
+            <li>Designed scalable RESTful APIs with Node.js — robust API contracts & schemas, SOLID principles, MVVM / DI / Factory patterns.</li>
+            <li>Led high-impact features: Referrals, Virtual Try-On, Checkout Revamp, Payments, Offline Orders, Missing Items, Skin Analyzer.</li>
             <li>Optimized performance with Instruments — reduced cart load time from <strong>9s → 3s</strong>, improved app startup by <strong>18%</strong>.</li>
             <li>Built end-to-end observability using Firebase, Sentry, and Amplitude for real-time crash reporting & A/B testing.</li>
             <li>Drove cross-platform strategy with React Native, improving development velocity and maintainability.</li>
-            <li>Led AI-driven product recommendation agent powered by LLMs (ChatGPT), enabling intelligent personalization.</li>
-            <li>Grew App Store rating from <strong>3.7 → 4.0</strong> by improving critical user journeys.</li>
+            <li>Shipped <strong>In-App Ratings</strong> prompts and <strong>Truecaller-based one-tap verification</strong>, lifting review volume and reducing login drop-off.</li>
+            <li>Optimized <strong>cart operations (product add, update, delete)</strong> and improved checkout journeys, growing the App Store rating from <strong>3.7 → 4.0</strong>.</li>
+            <li>Collaborated cross-functionally in Agile teams; leveraged AI-assisted tools (Cursor, Claude, ChatGPT, GitHub Copilot) for productivity & code quality.</li>
           </ul>
           <div>
             <span class="award-badge">🏆 Comeback Kid Award</span>
@@ -1175,6 +1225,43 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- BEAUTYAI -->
+  <section id="beautyai">
+    <div class="section-header">
+      <div class="section-tag">✨ Featured MVP</div>
+      <h2 class="section-title">BeautyAI — Conversational AI Assistant</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="beautyai-grid">
+      <div>
+        <p class="beautyai-lead">
+          <strong>BeautyAI</strong> is a ChatGPT-style beauty-domain assistant I architected end-to-end as an MVP — with <strong>RAG over a live product catalog</strong>, so answers reference real products rendered inline as interactive cards with images &amp; pricing.
+        </p>
+        <ul class="timeline-desc">
+          <li>Powered by <strong>Groq GPT-OSS 120B/20B</strong> with SSE streaming responses, guardrails &amp; LLM tool calling for safe, grounded conversations.</li>
+          <li>Built a <strong>thumbs-down / neutral / thumbs-up feedback loop</strong> feeding a labeled dataset for continuous quality improvement.</li>
+          <li><strong>Langfuse</strong> tracing + <strong>Prometheus</strong> metrics for full observability.</li>
+          <li>Chat sessions persisted in <strong>SQLite</strong> with LLM-generated conversation titles; full stack deployed on Render.</li>
+        </ul>
+        <div class="skill-tags" style="margin:1.2rem 0 1.5rem">
+          <span class="skill-tag primary">React</span>
+          <span class="skill-tag primary">FastAPI</span>
+          <span class="skill-tag primary">Groq LLMs</span>
+          <span class="skill-tag">RAG</span>
+          <span class="skill-tag">SSE Streaming</span>
+          <span class="skill-tag">Langfuse</span>
+          <span class="skill-tag">Prometheus</span>
+          <span class="skill-tag">SQLite</span>
+        </div>
+        <a href="https://beautyai-frontend.onrender.com/" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.4rem"><i class="fas fa-rocket"></i> Try the Live Demo</a>
+      </div>
+      <div class="beautyai-embed">
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7506333268674396160?collapsed=1" height="550" width="504" frameborder="0" allowfullscreen="" title="Embedded post: BeautyAI MVP announcement on LinkedIn" loading="lazy"></iframe>
+        <a href="https://lnkd.in/p/dxawHn3P" target="_blank" rel="noopener">View post on LinkedIn <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
     </div>
   </section>
 
