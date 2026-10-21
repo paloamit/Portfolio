@@ -715,6 +715,57 @@
     }
     .beautyai-embed > a:hover { text-decoration: underline; }
 
+    /* ===== SMART ENTERTAINMENT BOT ===== */
+    #smartbot {
+      background: linear-gradient(180deg, var(--white) 0%, var(--yellow-light) 100%);
+    }
+    .project-body {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .project-lead {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--gray);
+      margin-bottom: 1.2rem;
+    }
+    .project-lead strong { color: var(--dark); }
+    .project-points { margin-bottom: 1.5rem; }
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .embed-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .embed-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .embed-col iframe {
+      width: 504px;
+      max-width: 100%;
+      height: 550px;
+      border-radius: 12px;
+      background: var(--bg);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .embed-col > a {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--yellow-dark);
+      text-decoration: none;
+    }
+    .embed-col > a:hover { text-decoration: underline; }
+
     /* ===== ACHIEVEMENTS ===== */
     #achievements { background: var(--bg); }
     .achievements-grid {
@@ -936,6 +987,7 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#beautyai">BeautyAI</a></li>
+      <li><a href="#smartbot">Smart BOT</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -1261,6 +1313,54 @@
       <div class="beautyai-embed">
         <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7506333268674396160?collapsed=1" height="550" width="504" frameborder="0" allowfullscreen="" title="Embedded post: BeautyAI MVP announcement on LinkedIn" loading="lazy"></iframe>
         <a href="https://lnkd.in/p/dxawHn3P" target="_blank" rel="noopener">View post on LinkedIn <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SMART ENTERTAINMENT BOT -->
+  <section id="smartbot">
+    <div class="section-header">
+      <div class="section-tag">🤖 Featured Project</div>
+      <h2 class="section-title">Smart Entertainment BOT — AI Movie & Series Recommender</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="project-body">
+      <p class="project-lead">
+        <strong>Smart Entertainment BOT</strong> is a ChatGPT-style movie, series &amp; anime recommender I built end-to-end. "What should I watch?" is a hard question — you don't know the title, you know the mood. Describe it ("something unsettling, but not too gory") and it asks a couple of quick questions, finds real, catalog-verified titles, and tells you the story behind each pick so you can feel the film before spending two hours on it.
+      </p>
+      <ul class="timeline-desc project-points">
+        <li><strong>Grounded with RAG, not fine-tuning</strong> — live catalog APIs (Watchmode, OMDb, AniList, Jikan, TVMaze). Every title is validated before it's shown, so it cannot hallucinate a film, rating, or cast — ask for something that doesn't exist and it says so.</li>
+        <li><strong>Two-tier LLM routing</strong> — OpenAI GPT-OSS (120B &amp; 20B) on Groq; the large model only runs when the turn earns it, while tool calling drives search, clarifying questions, summaries, reviews, cast and "more like this".</li>
+        <li><strong>Cost engineering</strong> — three Redis cache layers (24h TTL) shared across users: the second person to ask what the first already asked costs zero tokens. Failed answers are never cached, so one bad turn can't poison a question.</li>
+        <li><strong>Guardrails</strong> — catalog-validated titles only, polite off-topic declines, and quality ranking (rating² × popularity) so "thriller" never returns a random crime drama.</li>
+        <li><strong>Vision extension (v2)</strong> — drag, paste or upload a movie poster and Google Gemini identifies the film. The guess is treated as a hypothesis, then catalog-verified before display — a wrong vision guess can't leak into the chat.</li>
+        <li><strong>Experience &amp; observability</strong> — SSE token streaming with typing indicator, clarifying-question chips, resumable sessions with LLM-generated titles, returning-user recognition, and Langfuse tracing for prompts, tool calls, latency, tokens, cost &amp; cache hit/miss per turn.</li>
+      </ul>
+      <div class="project-stack">
+        <span class="skill-tag primary">React</span>
+        <span class="skill-tag primary">FastAPI</span>
+        <span class="skill-tag primary">Groq (GPT-OSS)</span>
+        <span class="skill-tag">SSE Streaming</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">Tool Calling</span>
+        <span class="skill-tag">Gemini Flash (Vision)</span>
+        <span class="skill-tag">Redis</span>
+        <span class="skill-tag">SQLite</span>
+        <span class="skill-tag">Langfuse</span>
+        <span class="skill-tag">Watchmode</span>
+        <span class="skill-tag">OMDb</span>
+        <span class="skill-tag">AniList</span>
+      </div>
+      <a href="https://entertainmentbot-web.onrender.com/" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.4rem"><i class="fas fa-rocket"></i> Try the Live Demo</a>
+    </div>
+    <div class="embed-row">
+      <div class="embed-col">
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7516226678252089344?collapsed=1" height="550" width="504" frameborder="0" allowfullscreen="" title="Embedded post: Smart Entertainment BOT — AI Movie & Series Recommender" loading="lazy"></iframe>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7516226678252089344/" target="_blank" rel="noopener">Watch the demo on LinkedIn <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <div class="embed-col">
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7516492782602002433?collapsed=1" height="550" width="504" frameborder="0" allowfullscreen="" title="Embedded post: Smart Entertainment BOT identifies movies from images" loading="lazy"></iframe>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7516492782602002433/" target="_blank" rel="noopener">Read about the vision extension <i class="fas fa-arrow-up-right-from-square"></i></a>
       </div>
     </div>
   </section>
@@ -1605,7 +1705,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.timeline-item, .skill-category, .service-card, .app-card, .achievement-card').forEach(el => {
+    document.querySelectorAll('.timeline-item, .skill-category, .service-card, .app-card, .achievement-card, .embed-col').forEach(el => {
       el.style.opacity = '0';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(el);
