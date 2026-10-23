@@ -766,6 +766,67 @@
     }
     .embed-col > a:hover { text-decoration: underline; }
 
+    /* ===== SWIFTUI ANIMATIONS ===== */
+    #animations { background: var(--white); }
+    .animations-lead {
+      max-width: 800px;
+      margin: -2rem auto 2.5rem;
+      text-align: center;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--gray);
+    }
+    .animations-lead strong { color: var(--dark); }
+    .animations-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto 2.5rem;
+    }
+    .animation-card {
+      background: var(--bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+      transition: var(--transition);
+      border-top: 4px solid var(--yellow);
+      display: flex;
+      flex-direction: column;
+    }
+    .animation-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--card-shadow);
+    }
+    .animation-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: var(--dark);
+    }
+    .animation-card-body {
+      padding: 0.9rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      flex: 1;
+    }
+    .animation-card-body h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+    .animation-card-body a {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--yellow-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      margin-top: auto;
+    }
+    .animation-card-body a:hover { text-decoration: underline; }
+
     /* ===== ACHIEVEMENTS ===== */
     #achievements { background: var(--bg); }
     .achievements-grid {
@@ -971,6 +1032,7 @@
       .hero-btns, .social-links { justify-content: center; }
       .hero-image { flex: none; }
       .about-grid, .contact-grid, .beautyai-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .animations-grid { grid-template-columns: repeat(2, 1fr); }
       .nav-links { display: none; }
       .hamburger { display: flex; }
     }
@@ -988,6 +1050,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#beautyai">BeautyAI</a></li>
       <li><a href="#smartbot">Smart BOT</a></li>
+      <li><a href="#animations">Animations</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -1011,6 +1074,7 @@
         <a href="#contact" class="btn-primary">Hire Me</a>
         <a href="#experience" class="btn-outline">View Work</a>
         <a href="#beautyai" class="btn-outline" style="border-color:var(--yellow-dark);color:var(--yellow-dark)">✨ BeautyAI MVP</a>
+        <a href="#smartbot" class="btn-outline" style="border-color:var(--yellow-dark);color:var(--yellow-dark)">🎬 Smart BOT</a>
         <a href="resume.pdf" download="Amit_Kumar_Palo_Resume.pdf" class="btn-outline" style="display:inline-flex;align-items:center;gap:0.4rem"><i class="fas fa-download"></i>&nbsp;Resume</a>
       </div>
       <div class="social-links">
@@ -1066,7 +1130,7 @@
           Currently leading a team of 6 at <strong>Jio Platforms Limited</strong>, driving technical excellence on the Tira Beauty app. I reduced cart load time from 9s to 3s, improved app startup by 18%, and helped grow the App Store rating from 3.7 to 4.0.
         </p>
         <p>
-          I also architect AI-driven solutions powered by LLMs — recently building <strong>BeautyAI</strong>, a RAG-based conversational beauty assistant (React + FastAPI + Groq) with live product catalog search, streaming responses, and feedback-driven quality loops.
+          I also architect AI-driven solutions powered by LLMs — recently building <strong>BeautyAI</strong>, a RAG-based conversational beauty assistant (React + FastAPI + Groq) with live product catalog search, streaming responses, and feedback-driven quality loops, and <strong>Smart Entertainment BOT</strong>, a ChatGPT-style movie &amp; series recommender with catalog-grounded RAG, poster-to-film vision identification, and multi-layer caching that makes repeat queries cost zero tokens.
         </p>
         <div class="about-chips">
           <span class="chip">Swift</span>
@@ -1362,6 +1426,79 @@
         <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7516492782602002433?collapsed=1" height="550" width="504" frameborder="0" allowfullscreen="" title="Embedded post: Smart Entertainment BOT identifies movies from images" loading="lazy"></iframe>
         <a href="https://lnkd.in/p/dAKdQ95N" target="_blank" rel="noopener">Read about the vision extension <i class="fas fa-arrow-up-right-from-square"></i></a>
       </div>
+    </div>
+  </section>
+
+  <!-- SWIFTUI ANIMATIONS -->
+  <section id="animations">
+    <div class="section-header">
+      <div class="section-tag">✨ Open Source</div>
+      <h2 class="section-title">SwiftUI Animations</h2>
+      <div class="section-line"></div>
+    </div>
+    <p class="animations-lead">
+      A collection of pure-SwiftUI animations I built and open-sourced — <strong>170+ ★ on GitHub</strong>. No UIKit, no third-party deps, just SwiftUI.
+    </p>
+    <div class="animations-grid">
+      <div class="animation-card">
+        <img src="https://raw.githubusercontent.com/paloamit/SwiftUI-Animations/main/Videos/3%20Ball%20Loader%20Animation.gif" alt="3 Ball Loader Animation" loading="lazy" />
+        <div class="animation-card-body">
+          <h3>3 Ball Loader Animation</h3>
+          <a href="https://github.com/paloamit/SwiftUI-Animations/tree/main/Videos" target="_blank" rel="noopener">View Source <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="animation-card">
+        <img src="https://raw.githubusercontent.com/paloamit/SwiftUI-Animations/main/Videos/3%20Ball%20Drop%20Animation.gif" alt="3 Ball Drop Animation" loading="lazy" />
+        <div class="animation-card-body">
+          <h3>3 Ball Drop Animation</h3>
+          <a href="https://github.com/paloamit/SwiftUI-Animations/tree/main/Videos" target="_blank" rel="noopener">View Source <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="animation-card">
+        <img src="https://raw.githubusercontent.com/paloamit/SwiftUI-Animations/main/LoaderXLVIIAnimation/Loading%20Capsule%20Animation.gif" alt="Loading Capsule Animation" loading="lazy" />
+        <div class="animation-card-body">
+          <h3>Loading Capsule Animation</h3>
+          <a href="https://github.com/paloamit/SwiftUI-Animations/tree/main/LoaderXLVIIAnimation" target="_blank" rel="noopener">View Source <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="animation-card">
+        <img src="https://raw.githubusercontent.com/paloamit/SwiftUI-Animations/main/Videos/Square%20Animation.gif" alt="Square Loading Animation" loading="lazy" />
+        <div class="animation-card-body">
+          <h3>Square Loading Animation</h3>
+          <a href="https://github.com/paloamit/SwiftUI-Animations/tree/main/Videos" target="_blank" rel="noopener">View Source <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="animation-card">
+        <img src="https://raw.githubusercontent.com/paloamit/SwiftUI-Animations/main/Videos/Ghost%20Animation.gif" alt="Ghost Animation" loading="lazy" />
+        <div class="animation-card-body">
+          <h3>Ghost Animation</h3>
+          <a href="https://github.com/paloamit/SwiftUI-Animations/tree/main/Videos" target="_blank" rel="noopener">View Source <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="animation-card">
+        <img src="https://raw.githubusercontent.com/paloamit/SwiftUI-Animations/main/Videos/DNA%20Loading%20Animation.gif" alt="DNA Loading Animation" loading="lazy" />
+        <div class="animation-card-body">
+          <h3>DNA Loading Animation</h3>
+          <a href="https://github.com/paloamit/SwiftUI-Animations/tree/main/Videos" target="_blank" rel="noopener">View Source <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="animation-card">
+        <img src="https://raw.githubusercontent.com/paloamit/SwiftUI-Animations/main/Videos/Proccessing%20Animation.gif" alt="Processing Animation" loading="lazy" />
+        <div class="animation-card-body">
+          <h3>Processing Animation</h3>
+          <a href="https://github.com/paloamit/SwiftUI-Animations/tree/main/Videos" target="_blank" rel="noopener">View Source <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="animation-card">
+        <img src="https://raw.githubusercontent.com/paloamit/SwiftUI-Animations/main/EyeAnimation/Eye%20Loading%20Animation.gif" alt="Eye Animation" loading="lazy" />
+        <div class="animation-card-body">
+          <h3>Eye Animation</h3>
+          <a href="https://github.com/paloamit/SwiftUI-Animations/tree/main/EyeAnimation" target="_blank" rel="noopener">View Source <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <a href="https://github.com/paloamit/SwiftUI-Animations" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.4rem"><i class="fab fa-github"></i> View Repo on GitHub</a>
     </div>
   </section>
 
@@ -1705,7 +1842,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.timeline-item, .skill-category, .service-card, .app-card, .achievement-card, .embed-col').forEach(el => {
+    document.querySelectorAll('.timeline-item, .skill-category, .service-card, .app-card, .achievement-card, .embed-col, .animation-card').forEach(el => {
       el.style.opacity = '0';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(el);
